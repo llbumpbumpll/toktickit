@@ -39,6 +39,7 @@ toktickit/
 ### 1. Start the Database
 
 ```bash
+cp .env.example .env      # Copy environment variables (only needed once)
 docker compose up -d
 ```
 
@@ -46,6 +47,8 @@ This starts a PostgreSQL container on port `15432` with:
 - **User:** `root`
 - **Password:** `root`
 - **Database:** `toktickit`
+
+If port `15432` is already in use on your machine, set `DB_PORT` in the root `.env` to a free port instead, and update `DATABASE_URL` in `server/.env` to match.
 
 ### 2. Set up the Backend
 
