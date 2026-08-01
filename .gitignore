@@ -36,6 +36,3 @@ out/
 # OS metadata
 .DS_Store
 Thumbs.db
-
-# Prisma specific
-/server/prisma/migrations/
