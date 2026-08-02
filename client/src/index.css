@@ -37,6 +37,15 @@ h1 {
   color: var(--zg-primary);
 }
 
+/* ui-spec.md §1: --zg-surface is a token for cards/panels, but Bootstrap's
+   .card defaults to --bs-body-bg (our page background), not white -- so it
+   silently blends into the page without this class. Apply .zg-surface to
+   any card/panel that should visually separate from the page background. */
+.zg-surface {
+  background: var(--zg-surface);
+  border: 1px solid var(--zg-surface-border);
+}
+
 .zg-field--readonly {
   background: var(--zg-field-readonly-bg) !important;
   border-color: var(--zg-surface-border) !important;
