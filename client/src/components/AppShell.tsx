@@ -20,7 +20,7 @@ export function AppShell() {
 
   return (
     <div className="d-flex flex-column min-vh-100">
-      <nav className="navbar navbar-expand-md" style={{ backgroundColor: 'var(--zg-primary)' }}>
+      <nav className="navbar navbar-expand-md" data-bs-theme="dark" style={{ backgroundColor: 'var(--zg-primary)' }}>
         <div className="container-fluid">
           <NavLink to="/tickets" className="navbar-brand text-white fw-bold">
             TokTickIT

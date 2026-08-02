@@ -13,26 +13,8 @@
   --zg-warning: #b8860b;
   --zg-success: #0b7a46;
 
-  /* Bootstrap variable overrides so btn-primary, badge, alert, and form
-     classes pick up Zen Green without replacing Bootstrap itself. */
-  --bs-primary: var(--zg-primary);
-  --bs-primary-rgb: 0, 107, 60;
-  --bs-success: var(--zg-success);
-  --bs-success-rgb: 11, 122, 70;
-  --bs-danger: var(--zg-error);
-  --bs-danger-rgb: 138, 31, 31;
-  --bs-warning: var(--zg-warning);
-  --bs-warning-rgb: 184, 134, 11;
-  --bs-body-color: var(--zg-text);
-  --bs-body-bg: var(--zg-bg);
-  --bs-link-color: var(--zg-secondary);
-  --bs-link-hover-color: var(--zg-primary);
-  --bs-focus-ring-color: rgba(11, 122, 70, 0.35);
-
   font: 16px/1.5 system-ui, 'Segoe UI', Roboto, sans-serif;
   color-scheme: light;
-  color: var(--zg-text);
-  background: var(--zg-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -50,13 +32,6 @@ body {
   flex-direction: column;
 }
 
-h1,
-h2,
-h3 {
-  color: var(--zg-text);
-  font-weight: 600;
-}
-
 .zg-field--readonly {
   background: var(--zg-field-readonly-bg) !important;
   border-color: var(--zg-surface-border) !important;
@@ -64,4 +39,21 @@ h3 {
 
 .zg-field--invalid {
   border-color: var(--zg-error) !important;
+}
+
+/* ui-spec.md §3: disabled controls must be visually distinct and cannot be
+   activated — Bootstrap dims opacity by default but does not consistently
+   set the cursor, so make that explicit. */
+.btn:disabled,
+.btn.disabled,
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+}
+
+/* ui-spec.md §3: focus indicators must remain visible for keyboard users;
+   never removed without a replacement. */
+:focus-visible {
+  outline: 2px solid var(--zg-secondary);
+  outline-offset: 2px;
 }
