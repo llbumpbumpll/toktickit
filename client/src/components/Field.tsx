@@ -26,6 +26,7 @@ export function Field({ label, required, readOnly, error, hint, children }: Fiel
         {label}
         {required && (
           <span className="text-danger ms-1" aria-hidden="true">
+            {' '}
             *
           </span>
         )}

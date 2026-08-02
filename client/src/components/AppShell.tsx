@@ -33,6 +33,7 @@ export function AppShell() {
             aria-controls="zg-nav-collapse"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            title="Toggle navigation"
           >
             <span className="navbar-toggler-icon" />
           </button>

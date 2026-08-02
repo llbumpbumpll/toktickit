@@ -32,6 +32,11 @@ body {
   flex-direction: column;
 }
 
+/* ui-spec.md §2: headings use --zg-primary for H1, --zg-text (inherited body color) for H2/H3. */
+h1 {
+  color: var(--zg-primary);
+}
+
 .zg-field--readonly {
   background: var(--zg-field-readonly-bg) !important;
   border-color: var(--zg-surface-border) !important;

@@ -52,7 +52,7 @@ These override Bootstrap's default `--bs-primary` etc. rather than replacing Boo
 ## 4. Application Shell
 
 - Top bar: TokTickIT wordmark/logo (left, links to My Tickets), `--zg-primary` background, white text.
-- Nav items: My Tickets, Create Ticket — active item underlined/highlighted with `--zg-secondary`.
+- Nav items: My Tickets, Create Ticket — active item distinguished by full-opacity white text + semibold weight against the primary-green bar, not a `--zg-secondary` highlight: `--zg-secondary` (#0B7A46) on `--zg-primary` (#006B3C) is a 1.23:1 contrast ratio, well under WCAG's 3:1 minimum for a UI-state indicator, so it would be effectively invisible here. `--zg-secondary` is reserved for contexts with adequate contrast against it (links, focus rings, form-control focus borders, and future tab strips on light/white surfaces).
 - Right side: current Requester's name + "Change Requester" link/button, both hidden until a Requester is selected.
 - **Mobile (<768px)**: nav collapses behind a hamburger toggle (Bootstrap's `navbar-toggler`); Requester display moves into the collapsed menu.
 
