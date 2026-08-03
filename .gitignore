@@ -36,3 +36,6 @@ out/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Uploaded attachments (Lab 2 local disk storage, server/src/routes/attachments.ts)
+server/uploads/
